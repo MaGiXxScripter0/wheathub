@@ -193,12 +193,12 @@ end
 
 for i, v in pairs(game.Players:GetChildren()) do
     if v ~= LocalPlayer then
-        self:PlayerAdd(v)
+        esp_lib:PlayerAdd(v)
         v.CharacterAdded:Connect(function()
             repeat
                 task.wait()
             until v.Character or not v
-            self:PlayerAdd(v)
+            esp_lib:PlayerAdd(v)
         end)
     end
 end
