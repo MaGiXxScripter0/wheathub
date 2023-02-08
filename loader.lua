@@ -4,7 +4,7 @@ local games_supported = {
     [7499189111] = "/main/scripts/Encounters.lua",
 }
 
-function load_game()
+return function()
     local url_script = games_supported[game.PlaceId]
     if not url_script then
         return game.Players.LocalPlayer:Kick("\nNo Supported Game")
