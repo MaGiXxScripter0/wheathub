@@ -191,17 +191,18 @@ function esp_lib:PlayerAdd(v)
     return table.insert(self.players, v)
 end
 
-for i, v in pairs(game.Players:GetChildren()) do
-    if v ~= LocalPlayer then
-        esp_lib:PlayerAdd(v)
-        v.CharacterAdded:Connect(function()
-            repeat
-                task.wait()
-            until v.Character or not v
-            esp_lib:PlayerAdd(v)
-        end)
+function esp_lib:PlayersRefresh()
+    for i, v in pairs(game.Players:GetChildren()) do
+        if v ~= LocalPlayer then
+            self:PlayerAdd(v)
+            v.CharacterAdded:Connect(function()
+                repeat
+                    task.wait()
+                until v.Character or not v
+                self:PlayerAdd(v)
+            end)
+        end
     end
 end
-
 
 return esp_lib
