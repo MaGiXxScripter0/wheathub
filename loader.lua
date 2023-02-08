@@ -9,5 +9,5 @@ return function()
     if not url_script then
         return game.Players.LocalPlayer:Kick("\nNo Supported Game")
     end
-    loadstring(game:HttpGet(url_raw_github + url_script))()
+    loadstring(game:HttpGet(url_raw_github .. url_script))()
 end
