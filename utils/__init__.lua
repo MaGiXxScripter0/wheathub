@@ -22,3 +22,6 @@ local function join_server(code)
     })
 end
 
+return {
+    join_server = join_server
+}
