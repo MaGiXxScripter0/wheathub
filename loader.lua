@@ -1,5 +1,5 @@
 local url_raw_github = "https://raw.githubusercontent.com/MaGiXxScripter0/wheathub"
-
+-- 1
 local games_supported = {
     [7499189111] = "/main/scripts/Encounters.lua",
     [7501699167] = "/main/scripts/Encounters.lua",
