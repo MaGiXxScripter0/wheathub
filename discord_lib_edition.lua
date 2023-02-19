@@ -2143,6 +2143,7 @@ function DiscordLib:Window(text)
 
 			function ChannelContent:Button(text,callback)
                 self = setmetatable({}, ButtonOptions)
+                self.__index = ButtonOptions
 
 				local Button = Instance.new("TextButton")
                 self.button = Button
