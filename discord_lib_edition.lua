@@ -87,6 +87,8 @@ Discord.Parent = game.CoreGui
 Discord.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 function DiscordLib:Window(text)
+    Discord.Name = text
+
 	local currentservertoggled = ""
 	local minimized = false
 	local fs = false
@@ -2127,7 +2129,7 @@ function DiscordLib:Window(text)
 
 			local ChannelContent = {}
             local ButtonOptions = {}
-            ButtonOptions.__index = Button
+            ButtonOptions.__index = ButtonOptions
             
             function ButtonOptions:Set(text)
                 self.button.Text = text
@@ -2139,10 +2141,11 @@ function DiscordLib:Window(text)
 
             function ButtonOptions:Destroy()
                 self.button:Destroy()
+                ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
             end
 
 			function ChannelContent:Button(text,callback)
-                self = setmetatable({}, ButtonOptions)
+                local self = setmetatable({}, ButtonOptions)
                 self.__index = ButtonOptions
 
 				local Button = Instance.new("TextButton")
