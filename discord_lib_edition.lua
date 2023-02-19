@@ -2124,9 +2124,30 @@ function DiscordLib:Window(text)
 				currentchanneltoggled = ChannelBtn.Name
 				ChannelHolder.Visible = true
 			end
+
 			local ChannelContent = {}
+            local ButtonOptions = {}
+            ButtonOptions.__index = Button
+            
+            function ButtonOptions:Set(text)
+                self.button.Text = text
+            end
+
+            function ButtonOptions:Callback(callback)
+                self.callback = callback
+            end
+
+            function ButtonOptions:Destroy()
+                self.button:Destroy()
+            end
+
 			function ChannelContent:Button(text,callback)
+                self = setmetatable({}, ButtonOptions)
+
 				local Button = Instance.new("TextButton")
+                self.button = Button
+                self.callback = callback
+
 				local ButtonCorner = Instance.new("UICorner")
 
 				Button.Name = "Button"
@@ -2152,7 +2173,7 @@ function DiscordLib:Window(text)
 				end)
 				
 				Button.MouseButton1Click:Connect(function()
-					pcall(callback)
+					pcall(self.callback)
 					Button.TextSize = 0
 					TweenService:Create(
 						Button,
@@ -2169,6 +2190,8 @@ function DiscordLib:Window(text)
 					):Play()
 				end)
 				ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
+
+                return self
 			end
 			function ChannelContent:Toggle(text,default,callback)
 				local toggled = false
