@@ -5,7 +5,7 @@ local games_supported = {
     [7501699167] = "/main/scripts/Encounters.lua",
     [10446125875] = "/main/scripts/AnimeFruitSimulator.lua",
     [11542692507] = "/main/scripts/AnimeSoulsSimulator.lua",
-    [10036492542] = "/main/scripts/Get%20Muscles%20Simulator.lua
+    [10036492542] = "/main/scripts/Get%20Muscles%20Simulator.lua"
 }
 
 return function()
