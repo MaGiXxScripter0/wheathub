@@ -6,7 +6,8 @@ local games_supported = {
     [10446125875] = "/main/scripts/AnimeFruitSimulator.lua",
     [11542692507] = "/main/scripts/AnimeSoulsSimulator.lua",
     [10036492542] = "/main/scripts/Get%20Muscles%20Simulator.lua",
-    [8540346411] = "/main/scripts/Rebirth%20Champions%20X.lua"
+    [8540346411] = "/main/scripts/Rebirth%20Champions%20X.lua",
+    [5712833750] = "/main/scripts/Animal%20Simulator.lua"
 }
 
 return function()
