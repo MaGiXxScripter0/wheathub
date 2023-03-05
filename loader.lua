@@ -9,7 +9,8 @@ local games_supported = {
     [8540346411] = "/main/scripts/Rebirth%20Champions%20X.lua",
     [5712833750] = "/main/scripts/Animal%20Simulator.lua",
     [11846163207] = "/main/scripts/Mage%20Tycoon.lua",
-    [9498006165] = "/main/scripts/Tapping%20Simulator.lua"
+    [9498006165] = "/main/scripts/Tapping%20Simulator.lua",
+    [4893679160] = "/main/scripts/Big%20Brain%20Simulator.lua"
 }
 
 return function()
