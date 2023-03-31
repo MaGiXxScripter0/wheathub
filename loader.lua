@@ -11,7 +11,8 @@ local games_supported = {
     [11846163207] = "/main/scripts/Mage%20Tycoon.lua",
     [9498006165] = "/main/scripts/Tapping%20Simulator.lua",
     [4893679160] = "/main/scripts/Big%20Brain%20Simulator.lua",
-    [11746859781] = "/main/scripts/Bubble%20Gum%20Clicker.lua"
+    [11746859781] = "/main/scripts/Bubble%20Gum%20Clicker.lua",
+    [12701714080] = "/main/scripts/Clicker%20Mining%20Simulator.lua"
 }
 
 return function()
