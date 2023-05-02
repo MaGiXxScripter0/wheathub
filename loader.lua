@@ -14,7 +14,8 @@ local games_supported = {
     [11746859781] = "/main/scripts/Bubble%20Gum%20Clicker.lua",
     [12701714080] = "/main/scripts/Clicker%20Mining%20Simulator.lua",
     [537413528] = "/main/scripts/Build%20A%20Boat.lua",
-    [648362523] = "/main/scripts/Breaking%20Point.lua"
+    [648362523] = "/main/scripts/Breaking%20Point.lua",
+    [11319403460] = "/main/scripts/Coal%20Miner%20Tycoon%202.lua"
 }
 
 return function()
